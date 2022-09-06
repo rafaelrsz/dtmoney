@@ -1,39 +1,66 @@
 {
-    "extends": [
-        "eslint:recommended",
-        "plugin:import/errors",
-        "plugin:react/recommended",
-        "plugin:jsx-a11y/recommended",
-        "plugin:react-hooks/recommended",
-        "prettier"
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "plugin:prettier/recommended",
+    "plugin:react-hooks/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "react-hooks",
+    "@typescript-eslint",
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
     ],
-    "rules": {
-        "react/prop-types": "off",
-        "react/jsx-uses-react": "off",
-        "react/react-in-jsx-scope": "off",
-        "react/self-closing-comp": "warn"
-    },
-    "plugins": [
-        "react",
-        "import",
-        "jsx-a11y"
+    "react/jsx-no-bind": [
+      0
     ],
-    "parserOptions": {
-        "ecmaVersion": 2021,
-        "sourceType": "module",
-        "ecmaFeatures": {
-            "jsx": true
-        }
-    },
-    "env": {
-        "es6": true,
-        "browser": true,
-        "jest": true,
-        "node": true
-    },
-    "settings": {
-        "react": {
-            "version": "detect"
-        }
+    "react/jsx-filename-extension": [
+      0
+    ],
+    "jsx-a11y/click-events-have-key-events": [
+      0
+    ],
+    "jsx-a11y/no-noninteractive-element-interactions": [
+      0
+    ],
+    "import/extensions": "off",
+    "camelcase": "off",
+    "react/prop-types": "off",
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/self-closing-comp": "warn",
+    "class-methods-use-this": "off",
+    "import/prefer-default-export": "off",
+    "no-shadow": "off",
+    "no-console": "off",
+    "no-useless-constructor": "off",
+    "no-empty-function": "off",
+    "lines-between-class-members": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
     }
+  }
 }
